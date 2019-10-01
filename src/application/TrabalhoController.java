@@ -28,7 +28,7 @@ public class TrabalhoController {
 	@FXML Label lb$;
 	@FXML Label lbxp;
 	
-	public static double dinheiro = 6;
+	public static double dinheiro = 0;
 	
 	public static int XP = 0;
 
@@ -153,7 +153,7 @@ public class TrabalhoController {
 	        imgEnfeite.setImage(image);
         }
 	    }catch(NullPointerException e) {
-	    	mostraMensagem("Imagem não selecionada", AlertType.ERROR);	    	
+	    	mostraMensagem("Imagem nÃ£o selecionada", AlertType.ERROR);	    	
         }catch(Exception e) {
         	e.printStackTrace();
         }
@@ -162,7 +162,7 @@ public class TrabalhoController {
 	@FXML
 	public void compraGarrafa(){
         if(dinheiro>=6){
-		    mostraMensagem("Você bebe a cerveja, e quebra a garrafa vazia no chão\n"
+		    mostraMensagem("VocÃª bebe a cerveja, e quebra a garrafa vazia no chÃ£o\n"
 					     + "usando ela como uma arma para assaltar as pessoas.", AlertType.INFORMATION);
 			dinheiro = dinheiro - 6;
 			lb$.setText(String.valueOf(dinheiro));
@@ -179,7 +179,7 @@ public class TrabalhoController {
 	@FXML
 	public void compraTapetao() {
 		if(dinheiro>=25){
-			mostraMensagem("Você joga o tapete no meio da calçada e abre um camelô.", AlertType.INFORMATION);
+			mostraMensagem("VocÃª joga o tapete no meio da calÃ§ada e abre um camelÃ´.", AlertType.INFORMATION);
 			dinheiro = dinheiro - 25;
 			lb$.setText(String.valueOf(dinheiro));
 			hbPS2Pirata.setDisable(false);
@@ -195,7 +195,7 @@ public class TrabalhoController {
 	@FXML
 	public void compraNokia() {
 		if(dinheiro>=80){
-			mostraMensagem("Você começa a fazer ligações à cobrar com seu nokia pedindo esmola.", AlertType.INFORMATION);
+			mostraMensagem("VocÃª comeÃ§a a fazer ligaÃ§Ãµes Ã  cobrar com seu nokia pedindo esmola.", AlertType.INFORMATION);
 			dinheiro = dinheiro - 80;
 			lb$.setText(String.valueOf(dinheiro));
 			hbTrote.setDisable(false);
@@ -210,7 +210,7 @@ public class TrabalhoController {
 	
 	public void compraNotebook() {
 		if(dinheiro>=300){
-			mostraMensagem("Com o seu novo Notebook da negativo e a internet da padaria ao lado do seu lixão, você cria um canal no youtube.", AlertType.INFORMATION);
+			mostraMensagem("Com o seu novo Notebook da negativo e a internet da padaria ao lado do seu lixÃ£o, vocÃª cria um canal no youtube.", AlertType.INFORMATION);
 			dinheiro = dinheiro - 300;
 			lb$.setText(String.valueOf(dinheiro));
 			hbInscritos.setDisable(false);
@@ -226,7 +226,7 @@ public class TrabalhoController {
 		
 	public void compraCasa() {
 		if(dinheiro>=300){
-			mostraMensagem("Você compra uma casa e deixa de ser mendigo, fim de jogo.", AlertType.INFORMATION);
+			mostraMensagem("VocÃª compra uma casa e deixa de ser mendigo, fim de jogo.", AlertType.INFORMATION);
 			dinheiro = dinheiro - 300;
 			butCasa.setDisable(true);
 			CasaC = true;
@@ -283,8 +283,8 @@ public class TrabalhoController {
 	public void CDGNovato() {
 		butCompra.setDisable(false);
 		hbl = 1;
-		lbDescricao.setText("Você magicamente começa a catar mais dinheiro do que o normal, "
-				          + "você ganha 1.5x mais dinheiro por cada serviço completo.");
+		lbDescricao.setText("VocÃª magicamente comeÃ§a a catar mais dinheiro do que o normal, "
+				          + "vocÃª ganha 1.5x mais dinheiro por cada serviÃ§o completo.");
 		lbpreco.setText("10");
 	}
 	
@@ -292,8 +292,8 @@ public class TrabalhoController {
 	public void CDGAdepto() {
 		butCompra.setDisable(false);
 		hbl = 2;
-		lbDescricao.setText("Você começa a catar ainda mais dinheiro do que conseguia antes, "
-				          + "você ganha o dobro do dinheiro por cada serviço completo.");
+		lbDescricao.setText("VocÃª comeÃ§a a catar ainda mais dinheiro do que conseguia antes, "
+				          + "vocÃª ganha o dobro do dinheiro por cada serviÃ§o completo.");
 		lbpreco.setText("100");
 	}
 	
@@ -301,8 +301,8 @@ public class TrabalhoController {
 	public void CDGVeterano() {
 		butCompra.setDisable(false);
 		hbl = 3;
-		lbDescricao.setText("Você manja de multiplicação de dinheiro e cata muito mais dinheiro, "
-				          + "você ganha 2.5x mais dinheiro por cada serviço completo.");
+		lbDescricao.setText("VocÃª manja de multiplicaÃ§Ã£o de dinheiro e cata muito mais dinheiro, "
+				          + "vocÃª ganha 2.5x mais dinheiro por cada serviÃ§o completo.");
 		lbpreco.setText("1.000");
 	}
 	
@@ -310,8 +310,8 @@ public class TrabalhoController {
 	public void CDGMestre() {
 		butCompra.setDisable(false);
 		hbl = 4;
-		lbDescricao.setText("Você é o mestre da mendigagem e vira um completo imã de dinheiro, "
-				          + "você ganha o triplo do dinheiro por cada serviço completo.");
+		lbDescricao.setText("VocÃª Ã© o mestre da mendigagem e vira um completo imÃ£ de dinheiro, "
+				          + "vocÃª ganha o triplo do dinheiro por cada serviÃ§o completo.");
 		lbpreco.setText("10.000");
 	}
 	
@@ -320,8 +320,8 @@ public class TrabalhoController {
 	public void VelNovato() {
 		butCompra.setDisable(false);
 		hbl = 5;
-		lbDescricao.setText("Uma latinha de Red Bull que te dá mais energia e faz você ficar mais rápido, "
-		                  + "serviços se completam um pouco mais rápido.");
+		lbDescricao.setText("Uma latinha de Red Bull que te dÃ¡ mais energia e faz vocÃª ficar mais rÃ¡pido, "
+		                  + "serviÃ§os se completam um pouco mais rÃ¡pido.");
         lbpreco.setText("10");
 	}
 
@@ -329,8 +329,8 @@ public class TrabalhoController {
 	public void VelAdepto() {
 		butCompra.setDisable(false);
 		hbl = 6;
-		lbDescricao.setText("Você toma um litro de café puro que achou no lixo, te deixando mais agitado, "
-		                  + "serviços se completam moderadamente mais rápido.");
+		lbDescricao.setText("VocÃª toma um litro de cafÃ© puro que achou no lixo, te deixando mais agitado, "
+		                  + "serviÃ§os se completam moderadamente mais rÃ¡pido.");
         lbpreco.setText("100");
 	}
 	
@@ -338,8 +338,8 @@ public class TrabalhoController {
 	public void VelVeterano() {
 		butCompra.setDisable(false);
 		hbl = 7;
-		lbDescricao.setText("Um traficante te dá um tubo de cocaína estragada, fazendo você ficar a 1000, "
-		                  + "serviços se completam considerávelmente mais rápido.");
+		lbDescricao.setText("Um traficante te dÃ¡ um tubo de cocaÃ­na estragada, fazendo vocÃª ficar a 1000, "
+		                  + "serviÃ§os se completam considerÃ¡velmente mais rÃ¡pido.");
         lbpreco.setText("1.000");
 	}
 	
@@ -347,8 +347,8 @@ public class TrabalhoController {
 	public void VelMestre() {
 		butCompra.setDisable(false);
 		hbl = 8;
-		lbDescricao.setText("Você acha uma injeção de adrenalina no lixo hospitalar, que faz você ficar mais rápido que o Relâmpago Marquinhos, "
-		                  + "serviços se completam drásticamente mais rápido.");
+		lbDescricao.setText("VocÃª acha uma injeÃ§Ã£o de adrenalina no lixo hospitalar, que faz vocÃª ficar mais rÃ¡pido que o RelÃ¢mpago Marquinhos, "
+		                  + "serviÃ§os se completam drÃ¡sticamente mais rÃ¡pido.");
         lbpreco.setText("10.000");
 	}
 	
@@ -357,8 +357,8 @@ public class TrabalhoController {
 	public void RobNovato() {
 		butCompra.setDisable(false);
 		hbl = 9;
-		lbDescricao.setText("Você aprende as habilidades de roubação e intimidação, "
-                          + "o risco de chance de fracasso em assaltos é diminuído em 25%.");
+		lbDescricao.setText("VocÃª aprende as habilidades de roubaÃ§Ã£o e intimidaÃ§Ã£o, "
+                          + "o risco de chance de fracasso em assaltos Ã© diminuÃ­do em 25%.");
         lbpreco.setText("10");
 	}
 	
@@ -366,8 +366,8 @@ public class TrabalhoController {
 	public void RobAdepto() {
 		butCompra.setDisable(false);
 		hbl = 10;
-		lbDescricao.setText("Suas habilidades de roubação e intimidação são melhoradas, "
-                          + "o risco de chance de fracasso em assaltos é diminuído pela metade.");
+		lbDescricao.setText("Suas habilidades de roubaÃ§Ã£o e intimidaÃ§Ã£o sÃ£o melhoradas, "
+                          + "o risco de chance de fracasso em assaltos Ã© diminuÃ­do pela metade.");
         lbpreco.setText("100");
 	}
 	
@@ -375,8 +375,8 @@ public class TrabalhoController {
 	public void RobVeterano() {
 		butCompra.setDisable(false);
 		hbl = 11;
-		lbDescricao.setText("Suas habilidades em roubação e intimidação são excepcionais, "
-                          + "o risco de chance de fracasso em assaltos é diminuído em 75%.");
+		lbDescricao.setText("Suas habilidades em roubaÃ§Ã£o e intimidaÃ§Ã£o sÃ£o excepcionais, "
+                          + "o risco de chance de fracasso em assaltos Ã© diminuÃ­do em 75%.");
         lbpreco.setText("1.000");
 	}
 	
@@ -384,8 +384,8 @@ public class TrabalhoController {
 	public void RobMestre() {
 		butCompra.setDisable(false);
 		hbl = 12;
-		lbDescricao.setText("Você se torna o mestre roubador, ninguém é páreo para você, "
-                          + "o risco de chance de fracasso em assaltos é anulado.");
+		lbDescricao.setText("VocÃª se torna o mestre roubador, ninguÃ©m Ã© pÃ¡reo para vocÃª, "
+                          + "o risco de chance de fracasso em assaltos Ã© anulado.");
         lbpreco.setText("10.000");
 	}
 	
@@ -404,7 +404,7 @@ public class TrabalhoController {
 			  butCompra.setDisable(true);
 			  CDGNovatoC = true;
 		   }else{
-			  mostraMensagem("Você é Fraco, lhe falta XP", AlertType.ERROR);
+			  mostraMensagem("VocÃª Ã© Fraco, lhe falta XP", AlertType.ERROR);
 			    }
 			break;
 		case 2:
@@ -418,7 +418,7 @@ public class TrabalhoController {
 			  butCompra.setDisable(true);
 			  CDGAdeptoC = true;
 		   }else{
-			  mostraMensagem("Você é Fraco, lhe falta XP", AlertType.ERROR);
+			  mostraMensagem("VocÃª Ã© Fraco, lhe falta XP", AlertType.ERROR);
 			    }
 			break;	
 		case 3:
@@ -432,7 +432,7 @@ public class TrabalhoController {
 			  butCompra.setDisable(true);
 			  CDGVeteranoC = true;
 		   }else{
-			  mostraMensagem("Você é Fraco, lhe falta XP", AlertType.ERROR);
+			  mostraMensagem("VocÃª Ã© Fraco, lhe falta XP", AlertType.ERROR);
 			    }
 			break;
 		case 4:
@@ -444,7 +444,7 @@ public class TrabalhoController {
 			  butCompra.setDisable(true);
 			  CDGMestreC = true;
 		   }else{
-			  mostraMensagem("Você é Fraco, lhe falta XP", AlertType.ERROR);
+			  mostraMensagem("VocÃª Ã© Fraco, lhe falta XP", AlertType.ERROR);
 			    }
 			break;	
 		case 5:
@@ -458,7 +458,7 @@ public class TrabalhoController {
 				butCompra.setDisable(true);
 				VelNovatoC = true;
 		   }else{
-				mostraMensagem("Você é Fraco, lhe falta XP", AlertType.ERROR);
+				mostraMensagem("VocÃª Ã© Fraco, lhe falta XP", AlertType.ERROR);
 				}
 			break;	
 		case 6:
@@ -472,7 +472,7 @@ public class TrabalhoController {
 				butCompra.setDisable(true);
 				VelAdeptoC = true;
 		   }else{
-				mostraMensagem("Você é Fraco, lhe falta XP", AlertType.ERROR);
+				mostraMensagem("VocÃª Ã© Fraco, lhe falta XP", AlertType.ERROR);
 	  	        }
 	        break;
 		case 7:
@@ -486,7 +486,7 @@ public class TrabalhoController {
 				butCompra.setDisable(true);
 				VelVeteranoC = true;
 		   }else{
-				mostraMensagem("Você é Fraco, lhe falta XP", AlertType.ERROR);
+				mostraMensagem("VocÃª Ã© Fraco, lhe falta XP", AlertType.ERROR);
 	  	        }
 	        break;
 		case 8:
@@ -498,7 +498,7 @@ public class TrabalhoController {
 				butCompra.setDisable(true);
 				VelMestreC = true;
 		   }else{
-				mostraMensagem("Você é Fraco, lhe falta XP", AlertType.ERROR);
+				mostraMensagem("VocÃª Ã© Fraco, lhe falta XP", AlertType.ERROR);
 	  	        }
 	        break;
 		case 9:
@@ -514,7 +514,7 @@ public class TrabalhoController {
 				butCompra.setDisable(true);
 				RobNovatoC = true;
 		   }else{
-				mostraMensagem("Você é Fraco, lhe falta XP", AlertType.ERROR);
+				mostraMensagem("VocÃª Ã© Fraco, lhe falta XP", AlertType.ERROR);
 	  	        }
 	        break;
 		case 10:
@@ -530,7 +530,7 @@ public class TrabalhoController {
 				butCompra.setDisable(true);
 				RobAdeptoC = true;
 		   }else{
-				mostraMensagem("Você é Fraco, lhe falta XP", AlertType.ERROR);
+				mostraMensagem("VocÃª Ã© Fraco, lhe falta XP", AlertType.ERROR);
 	  	        }
 	        break;
 		case 11:
@@ -546,7 +546,7 @@ public class TrabalhoController {
 				butCompra.setDisable(true);
 				RobVeteranoC = true;
 		   }else{
-				mostraMensagem("Você é Fraco, lhe falta XP", AlertType.ERROR);
+				mostraMensagem("VocÃª Ã© Fraco, lhe falta XP", AlertType.ERROR);
 	  	        }
 	        break;
 		case 12:
@@ -560,7 +560,7 @@ public class TrabalhoController {
 				butCompra.setDisable(true);
 				RobMestreC = true;
 		   }else{
-				mostraMensagem("Você é Fraco, lhe falta XP", AlertType.ERROR);
+				mostraMensagem("VocÃª Ã© Fraco, lhe falta XP", AlertType.ERROR);
 	  	        }
 	        break;
 		}
