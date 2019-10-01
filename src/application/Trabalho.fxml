@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="288.0" prefWidth="272.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TrabalhoController">
+   <children>
+      <BorderPane prefHeight="445.0" prefWidth="386.0">
+         <center>
+            <TabPane prefHeight="347.0" prefWidth="346.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Mendigagem">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <HBox prefHeight="41.0" prefWidth="386.0">
+                                 <children>
+                                    <Button fx:id="butEsmola" mnemonicParsing="false" onAction="#pedirEsmola" prefHeight="30.0" prefWidth="109.0" text="Pedir Esmola">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <ProgressBar fx:id="barraEsmola" prefHeight="25.0" prefWidth="150.0" progress="0.0">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="13.0" />
+                                       </HBox.margin>
+                                    </ProgressBar>
+                                    <Label text="1 $" textFill="#12b900">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="16.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="hbAssalto" disable="true" layoutX="10.0" layoutY="10.0" prefHeight="41.0" prefWidth="386.0" visible="false">
+                                 <children>
+                                    <Button fx:id="butAssalto" mnemonicParsing="false" onAction="#assaltarPessoas" prefHeight="30.0" prefWidth="109.0" text="Assaltar Pessoas">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="10.5" />
+                                       </font>
+                                    </Button>
+                                    <ProgressBar fx:id="barraAssalto" prefHeight="25.0" prefWidth="150.0" progress="0.0">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="13.0" />
+                                       </HBox.margin>
+                                    </ProgressBar>
+                                    <VBox prefHeight="28.0" prefWidth="66.0">
+                                       <children>
+                                          <HBox prefHeight="0.0" prefWidth="66.0">
+                                             <children>
+                                                <Label text="5 $" textFill="#12b900">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="16.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="6.0" prefWidth="38.0" text=" + 5XP" textFill="#0074ff">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets top="16.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <Label fx:id="lbRiscoAssalto" prefHeight="15.0" prefWidth="63.0" text="Risco: 10%" textFill="RED">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="1.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox fx:id="hbPS2Pirata" disable="true" layoutX="10.0" layoutY="62.0" prefHeight="52.0" prefWidth="386.0" visible="false">
+                                 <children>
+                                    <Button fx:id="butPS2" mnemonicParsing="false" onAction="#vendePs2Pirata" prefHeight="42.0" prefWidth="109.0" text="   Vender Jogo   Pirata de PS2" textAlignment="CENTER" wrapText="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="2.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="10.5" />
+                                       </font>
+                                    </Button>
+                                    <ProgressBar fx:id="barraPS2Pirata" prefHeight="25.0" prefWidth="150.0" progress="0.0">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="12.0" />
+                                       </HBox.margin>
+                                    </ProgressBar>
+                                    <Label text="3 por 10 $" textFill="#12b900">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="274.0" layoutY="26.0" text=" + 15XP" textFill="#0074ff">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="1.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox fx:id="hbTrote" disable="true" layoutX="10.0" layoutY="99.0" prefHeight="52.0" prefWidth="386.0" visible="false">
+                                 <children>
+                                    <Button fx:id="butTrote" mnemonicParsing="false" onAction="#passarTrote" prefHeight="42.0" prefWidth="109.0" text="Passar Trote Pedindo Esmola" textAlignment="CENTER" wrapText="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="10.5" />
+                                       </font>
+                                    </Button>
+                                    <ProgressBar fx:id="barraTrote" prefHeight="25.0" prefWidth="150.0" progress="0.0">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="9.0" />
+                                       </HBox.margin>
+                                    </ProgressBar>
+                                    <VBox prefHeight="55.0" prefWidth="77.0">
+                                       <children>
+                                          <HBox prefHeight="25.0" prefWidth="77.0">
+                                             <children>
+                                                <Label text="50$" textFill="#12b900">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="13.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="17.0" prefWidth="47.0" text=" + 60XP" textFill="#0074ff">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets top="13.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <Label fx:id="lbRiscoTrote" prefHeight="15.0" prefWidth="63.0" text="Risco: 30%" textFill="RED">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="1.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox fx:id="hbInscritos" disable="true" prefHeight="52.0" prefWidth="386.0" visible="false">
+                                 <children>
+                                    <Button fx:id="butInscrito" mnemonicParsing="false" onAction="#mendigarInscritos" prefHeight="44.0" prefWidth="109.0" text="Mendigar Inscritos em Canais Grandes" textAlignment="CENTER" wrapText="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="2.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                    <ProgressBar fx:id="barraInscrito" prefHeight="25.0" prefWidth="150.0" progress="0.0">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="12.0" />
+                                       </HBox.margin>
+                                    </ProgressBar>
+                                    <Label text="100$" textFill="#12b900">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="274.0" layoutY="26.0" text=" + 350XP" textFill="#0074ff">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                </Tab>
+                <Tab text="   Loja   ">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="53.0" prefWidth="386.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#compraEnfeite" prefHeight="43.0" prefWidth="95.0" text="Enfeite de Tela" textAlignment="CENTER" wrapText="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Label text="De Grátis" textFill="#12b900">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="18.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="53.0" prefWidth="386.0">
+                                 <children>
+                                    <Button fx:id="butGarrafa" mnemonicParsing="false" onAction="#compraGarrafa" prefHeight="43.0" prefWidth="95.0" text="Garrafa de Cerveja" textAlignment="CENTER" wrapText="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Label text="6$" textFill="#12b900">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="18.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="56.0" prefWidth="386.0">
+                                 <children>
+                                    <Button fx:id="butTapetao" disable="true" mnemonicParsing="false" onAction="#compraTapetao" prefHeight="43.0" prefWidth="95.0" text="Tapete Vagabundo" textAlignment="CENTER" wrapText="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Label text="25$" textFill="#12b900">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="18.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="63.0" prefHeight="56.0" prefWidth="386.0">
+                                 <children>
+                                    <Button fx:id="butNokia" disable="true" mnemonicParsing="false" onAction="#compraNokia" prefHeight="43.0" prefWidth="95.0" text="   Celular   Nokea Tijolão" textAlignment="CENTER" wrapText="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Label text="80$" textFill="#12b900">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="18.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="172.0" prefHeight="56.0" prefWidth="386.0">
+                                 <children>
+                                    <Button fx:id="butNotebook" disable="true" mnemonicParsing="false" onAction="#compraNotebook" prefHeight="43.0" prefWidth="95.0" text="Notebook da Negativo" textAlignment="CENTER" wrapText="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Label text="300$" textFill="#12b900">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="18.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="hbCasa" disable="true" layoutX="10.0" layoutY="228.0" prefHeight="56.0" prefWidth="386.0" visible="false">
+                                 <children>
+                                    <Button fx:id="butCasa" mnemonicParsing="false" onAction="#compraCasa" prefHeight="43.0" prefWidth="95.0" text="Casa de Madeira" textAlignment="CENTER" wrapText="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Label text="5.000$" textFill="#12b900">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="18.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                </Tab>
+                <Tab text="Habilidades">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <HBox prefHeight="236.0" prefWidth="386.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="150.0">
+                                       <children>
+                                          <Button fx:id="butHCDGN" mnemonicParsing="false" onAction="#CDGNovato" prefHeight="42.0" prefWidth="92.0" text="Cheio da Grana Novato" textAlignment="CENTER" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets left="17.0" right="2.0" top="10.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button fx:id="butHCDGA" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#CDGAdepto" prefHeight="42.0" prefWidth="92.0" text="Cheio da Grana Adepto" textAlignment="CENTER" visible="false" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets left="17.0" right="2.0" top="10.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button fx:id="butHCDGV" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#CDGVeterano" prefHeight="42.0" prefWidth="92.0" text="Cheio da Grana Veterano" textAlignment="CENTER" visible="false" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets left="17.0" right="2.0" top="10.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button fx:id="butHCDGM" disable="true" layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#CDGMestre" prefHeight="42.0" prefWidth="92.0" text="Cheio da Grana Mestre" textAlignment="CENTER" visible="false" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets left="17.0" right="2.0" top="10.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="150.0">
+                                       <children>
+                                          <Button fx:id="butHVelN" mnemonicParsing="false" onAction="#VelNovato" prefHeight="42.0" prefWidth="92.0" text="Velocista Novato" textAlignment="CENTER" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets left="17.0" right="2.0" top="10.0" />
+                                             </VBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button fx:id="butHVelA" disable="true" mnemonicParsing="false" onAction="#VelAdepto" prefHeight="42.0" prefWidth="92.0" text="Velocista Adepto" textAlignment="CENTER" visible="false" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets left="17.0" right="2.0" top="10.0" />
+                                             </VBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button fx:id="butHVelV" disable="true" mnemonicParsing="false" onAction="#VelVeterano" prefHeight="42.0" prefWidth="92.0" text="Velocista Veterano" textAlignment="CENTER" visible="false" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets left="17.0" right="2.0" top="10.0" />
+                                             </VBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button fx:id="butHVelM" disable="true" mnemonicParsing="false" onAction="#VelMestre" prefHeight="42.0" prefWidth="92.0" text="Velocista Mestre" textAlignment="CENTER" visible="false" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets left="17.0" right="2.0" top="10.0" />
+                                             </VBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="150.0">
+                                       <children>
+                                          <Button fx:id="butHRobN" mnemonicParsing="false" onAction="#RobNovato" prefHeight="42.0" prefWidth="92.0" text="Roubador Novato" textAlignment="CENTER" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets left="17.0" right="2.0" top="10.0" />
+                                             </VBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
+                                          <Button fx:id="butHRobA" disable="true" mnemonicParsing="false" onAction="#RobAdepto" prefHeight="42.0" prefWidth="92.0" text="Roubador Adepto" textAlignment="CENTER" visible="false" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets left="17.0" right="2.0" top="10.0" />
+                                             </VBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
+                                          <Button fx:id="butHRobV" disable="true" mnemonicParsing="false" onAction="#RobVeterano" prefHeight="42.0" prefWidth="92.0" text="Roubador Veterano" textAlignment="CENTER" visible="false" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets left="17.0" right="2.0" top="10.0" />
+                                             </VBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
+                                          <Button fx:id="butHRobM" disable="true" mnemonicParsing="false" onAction="#RobMestre" prefHeight="42.0" prefWidth="92.0" text="Roubador Mestre" textAlignment="CENTER" visible="false" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets left="17.0" right="2.0" top="10.0" />
+                                             </VBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="124.0" prefWidth="386.0">
+                                 <children>
+                                    <Pane prefHeight="123.0" prefWidth="376.0" style="-fx-border-width: 1; -fx-border-color: #000000;">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <VBox prefHeight="106.0" prefWidth="375.0">
+                                             <children>
+                                                <HBox prefHeight="88.0" prefWidth="375.0">
+                                                   <children>
+                                                      <Label fx:id="lbDescricao" text="-" wrapText="true">
+                                                         <font>
+                                                            <Font name="System Bold" size="13.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="39.0" prefWidth="375.0">
+                                                   <children>
+                                                      <HBox prefHeight="11.0" prefWidth="275.0">
+                                                         <children>
+                                                            <Label text="Custo:">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" top="8.0" />
+                                                               </HBox.margin>
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="lbpreco" text="0" textFill="#0074ff">
+                                                               <padding>
+                                                                  <Insets left="2.0" />
+                                                               </padding>
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets top="8.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label layoutX="51.0" layoutY="10.0" text="XP" textFill="#0074ff">
+                                                               <padding>
+                                                                  <Insets left="2.0" />
+                                                               </padding>
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets top="8.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox prefHeight="29.0" prefWidth="102.0">
+                                                         <children>
+                                                            <Button fx:id="butCompra" disable="true" mnemonicParsing="false" onAction="#Compra" text="Comprar" textAlignment="RIGHT">
+                                                               <HBox.margin>
+                                                                  <Insets left="34.0" right="5.0" />
+                                                               </HBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </children></HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                </Tab>
+              </tabs>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </TabPane>
+         </center>
+         <top>
+            <Pane prefHeight="80.0" prefWidth="386.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="80.0" prefWidth="386.0">
+                     <children>
+                        <VBox prefHeight="80.0" prefWidth="154.0">
+                           <children>
+                              <HBox prefHeight="31.0" prefWidth="148.0">
+                                 <children>
+                                    <Label text="Dinheiro$:" textFill="#12b900">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lb$" layoutX="20.0" layoutY="20.0" text="0" textFill="#12b900">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="36.0" prefWidth="148.0">
+                                 <children>
+                                    <Label text="Experiência: " textFill="#0074ff">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbxp" layoutX="20.0" layoutY="20.0" text="0" textFill="#0074ff">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="96.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#salvar" prefHeight="25.0" prefWidth="62.0" text="Salvar">
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#carregar" text="Carregar">
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#sair" prefHeight="25.0" prefWidth="62.0" text="Sair">
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <ImageView fx:id="imgEnfeite" fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="22.0" right="2.0" top="3.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
